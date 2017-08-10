@@ -1,0 +1,69 @@
+
+<section class="centrar">	
+	<form name="frm" ng-submit="agregarPost(userForm.$valid)" novalidate>
+
+		<div class="fila">
+			<div class="label">Título<span class="required">*</span></div>
+			<input type="text" name="titulo" ng-model="nuevoPost.titulo" placeholder="Ingrese aquí su título" required>
+			<p ng-show="frm.titulo.$invalid && (frm.titulo.$touched || mouseOverDetected)" class="input-error">Ingrese un título!</p>
+<!-- 			<p ng-if="mouseOverDetected && frm.titulo.$invalid" class="input-error">Ingrese un título!</p> -->
+			</div>
+
+		<div class="fila">
+			<div class="label">Mensaje<span class="required">*</span></div>
+			<textarea name="mensaje" ng-model="nuevoPost.texto" placeholder="Ingrese aquí su mensaje" ng-minlength="100" ng-model-options="{allowInvalid: true}" required></textarea>
+			<p ng-show="frm.mensaje.$invalid && (frm.mensaje.$touched || mouseOverDetected)" class="input-error">El tamaño mínimo es de 100 caracateres!</p>
+		</div>
+
+		<div class="fila">
+			<div class="label">Link<span class="required">*</span></div>
+			<input type="url" name="link" ng-model="nuevoPost.link.url" placeholder="Ingrese aquí un link" required>
+			<p ng-show="frm.link.$invalid && (frm.link.$touched || mouseOverDetected)" class="input-error">Asegurese de que es formato del link sea correcto, debe comenzar con http:// o https://</p>
+		</div>
+
+ <!-- onchange="angular.element(this).scope().fileNameChanged(this)" -->
+		<div class="fila">
+			<div class="label">Adjuntar imagen<span class="required">*</span></div>	
+			<input type="file" id="fileImage" base-sixty-four-input valid-file name="file" accept="image/*" ng-model="fileImage" ng-focus="focusCallback($event)" ng-change="fileNameChanged()" required>
+			<p ng-show="frm.file.$invalid && (frm.file.$touched || mouseOverDetected)" class="input-error">Adjunte una imagen!</p>
+		</div>
+
+		<div class="fila">
+			<div class="label">Tags<span class="required">*</span></div>
+			<input type="text" name="hashtag" ng-model="tag" placeholder="Ingrese aquí un tag" ng-model-options="{allowInvalid: true}">
+			<button ng-click="pushTag()">Agregar</button>
+			<p ng-show="frm.hashtag.$invalid && (frm.hashtag.$touched || mouseOverDetected)" class="input-error">Necesita al menos 4 tags!</p>
+		</div>
+
+		<div class="fila">
+			<ul class="no-lista quitar-mtop">
+				<li ng-repeat="etiqueta in nuevoPost.tags">
+					#{{etiqueta}}<button ng-click="pullTag(etiqueta)">X</button>
+				</li>
+			</ul>
+			
+		</div>
+
+		<div class="buttons">
+			<button ng-mouseover="mostrarErrores()" ng-disabled="frm.$invalid">Crear Post</button>
+			<button ng-click="limpiarForm()">Restablecer</button>
+			<span class="required">*</span>Campos requeridos.
+		</div>
+
+	</form>
+
+	<post data="nuevoPost">
+<!-- 	<article class="post">
+		<p>Previsualización</p>
+		<h2>{{nuevoPost.titulo}}</h2>
+		<p>{{nuevoPost.mensaje}}</p>
+		<a href="{{nuevoPost.link}}">Haz click aquí para ir al link</a>
+		<p>Tags:</p>
+		<ul class="no-lista quitar-mtop">
+			<li class="hashtag" ng-repeat="x in nuevoPost.tags | orderBy:'toString()' :false">
+				#{{x}}
+			</li>
+		</ul>
+		<img ng-show="mostrarImagen" id='output' width="100%">
+	</article> -->
+</section>

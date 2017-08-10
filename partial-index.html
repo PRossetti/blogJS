@@ -1,0 +1,58 @@
+	<div id="header">
+		<h1>{{cabecera}}</h1>
+	</div>
+	<div id="botonera">
+		<nav>
+			<ul class="no-lista quitar-mtop">
+				<li ng-repeat="boton in botonera">
+					<a ui-sref="{{boton.sref}}">{{boton.text}}</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+	<div id="contenedor">
+
+		<div ui-view id="contenido"></div>
+
+		<div id="right-column">
+			<div class="field" id="f1">
+				<section class="centrar">
+					{{webs.lista}}
+					<ul class="move-left">
+						<li ng-repeat="elemento in webs.elementos">
+							<a href="#">{{elemento}}</a>
+						</li>
+					</ul>
+					<img ng-src="imgs/{{imagenes.web}}" width="240px">
+				</section>
+			</div>
+			<div class="field" id="f2">
+				<section class="centrar">
+					{{desktops.lista}}
+					<ul class="move-left">
+						<li ng-repeat="elemento in webs.elementos">
+							<a href="#">{{elemento}}</a>
+						</li>
+					</ul>
+					<img ng-src="imgs/{{imagenes.desk}}" width="240px">
+				</section>
+			</div>
+			<div class="field" id="f3">
+				<section class="centrar">
+					{{mobile.lista}}
+					<ul class="move-left">
+						<li ng-repeat="elemento in webs.elementos">
+							<a href="#">{{elemento}}</a>
+						</li>
+					</ul>
+					<img ng-src="imgs/{{imagenes.app}}" width="240px">
+				</section>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="footer">
+		{{footer}}
+	</div>

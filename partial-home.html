@@ -1,0 +1,20 @@
+  <section class="centrar">
+	<h1>{{bienvenida}}</h1>
+	<h2>{{sub_titulo}}</h2>
+	<p style="text-align: left;">{{infoPersonal}}
+	{{lenguajes.nombre}}
+		<ul class="move-left">
+			<li ng-repeat="lenguaje in lenguajes.lista">
+				{{lenguaje}}
+			</li>
+		</ul>
+	<p style="text-align: left;">{{companies.nombre}}</p>
+	<ul class="move-left">
+		<li ng-repeat="empresa in companies.empresas">
+			{{empresa}}
+		</li>
+	</ul>
+	</p>
+	<p>Foto de perfil {{imagenes.perfil}}</p>
+	<img ng-src="imgs/{{imagenes.perfil}}" width="250" height="250">
+</section>

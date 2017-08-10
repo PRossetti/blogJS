@@ -1,0 +1,41 @@
+{"posts": [
+	{
+		"titulo": "¿Qué es JavaScript?",
+		"texto": "JavaScript® es el lenguaje interpretado orientado a objetos desarrollado por Netscape que se utiliza en millones de páginas web y aplicaciones de servidor en todo el mundo. JavaScript de Netscape es un superconjunto del lenguaje de scripts estándar de la edición de ECMA-262 3 (ECMAScript) que presenta sólo leves diferencias respecto a la norma publicada.",
+		"link": {
+			"texto": "JavaScript Home Page",
+			"url": "https://developer.mozilla.org/es/docs/Web/JavaScript"
+		},
+		"imagen": {
+			"titulo": "Imagen JS",
+			"src": "imgs/movingjs.gif"
+		},
+		"tags": ["js","javascript","programacion","lenguaje"]
+	},
+	{
+		"titulo": "¿Qué es .NET?",
+		"texto": ".NET is the development platform used by millions of developers to create apps and services on any device and OS, with amazing performance and great developer productivity.",
+		"link": {
+			"texto": ".NET Home Page",
+			"url": "https://www.microsoft.com/net"
+		},
+		"imagen": {
+			"titulo": "Imagen .NET",
+			"src": "imgs/home-hero.png"
+		},
+		"tags": [".NET","Microsoft","C#","programacion","lenguaje"]
+	},
+	{
+		"titulo": "¿Qué es AngularJS?",
+		"texto": "AngularJS fits the definition of a framework the best, even though it's much more lightweight than a typical framework and that's why many confuse it with a library. AngularJS is 100% JavaScript, 100% client-side and compatible with both desktop and mobile browsers. So it's definitely not a plugin or some other native browser extension.",
+		"link": {
+			"texto": "AngularJS Home Page",
+			"url": "https://angularjs.org/"
+		},
+		"imagen": {
+			"titulo": "Imagen AngularJS",
+			"src": "imgs/angular-banner.jpg"
+		},
+		"tags": ["js","javascript","programacion","lenguaje"]
+	}
+] }

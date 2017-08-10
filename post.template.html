@@ -1,0 +1,20 @@
+<article class="post">
+	<div class="text">
+		<h2 class="centrar-texto">{{post.titulo}}</h2>
+		<p>
+			{{post.texto}}
+		</p>
+		<a href="{{post.link.url}}" target="_blank">{{post.link.texto}}</a>
+	</div>
+	<div class="image corregir-margen">
+		<img id="output" ng-src="{{post.imagen.src}}" width="300px">
+	</div>
+	<div class="tags centrar-texto">
+	<p style="display: inline-block;">Tags:</p>
+		<ul class="no-lista">
+			<li class="hashtag" ng-repeat="tag in post.tags">
+				#{{tag}}
+			</li>
+		</ul>
+	</div>					
+</article>
